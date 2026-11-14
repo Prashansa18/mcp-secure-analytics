@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: mcp-secure-analytics
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: DATA_FILE
+        value: data/Retail-Supply-Chain-Sales-Dataset.xlsx
